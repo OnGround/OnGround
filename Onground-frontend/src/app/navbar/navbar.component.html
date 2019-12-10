@@ -31,14 +31,12 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" [routerLink]="linkrouter"
           ><label class="switch">
             <input type="checkbox" [checked]="switchBtn" disabled />
             <span class="slider round"></span>
           </label>
-          <span class="ml-15" [routerLink]="linkrouter">{{
-            switchMsg
-          }}</span></a
+          <span class="ml-15">{{ switchMsg }}</span></a
         >
       </div>
       <ul class="nav navbar-nav navbar-right">

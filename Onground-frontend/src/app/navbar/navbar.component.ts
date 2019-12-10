@@ -10,17 +10,8 @@ export class NavbarComponent implements OnInit {
   @Input() switchMsg;
   @Input() switchBtn;
   @Input() img;
-  // @Input() linkrouter: any;
+  @Input() linkrouter: any;
 
   constructor(private router: Router) {}
-  linkrouter;
-  ngOnInit() {
-    this.linkrouter = "/sporthome";
-  }
-  // linkrouter() {
-  //   if (this.switchMsg === "Switch to Music")
-  //     this.router.navigateByUrl("/sporthome");
-  //   else if (this.switchMsg === "Switch to Sport")
-  //     this.router.navigateByUrl("/musichome");
-  // }
+  ngOnInit() {}
 }
