@@ -25,13 +25,17 @@ import {
   MatDialogModule
 } from "@angular/material";
 import { MusicHomeComponent } from "./music-home/music-home.component";
+import { MusicShopComponent } from "./music-shop/music-shop.component";
+import { SportShopComponent } from "./sport-shop/sport-shop.component";
 
 const appRoutes: Routes = [
   { path: "sporthome", component: SportsHomeComponent },
   { path: "home", component: HomePageComponent },
   { path: "form", component: FormComponent },
   // { path: "signup", component: SignupComponent },
-  { path: "musichome", component: MusicHomeComponent }
+  { path: "musichome", component: MusicHomeComponent },
+  { path: "musicshop", component: MusicShopComponent },
+  { path: "sportshop", component: SportShopComponent }
 ];
 @NgModule({
   declarations: [
@@ -44,7 +48,9 @@ const appRoutes: Routes = [
     FormComponent,
     SignupComponent,
     ForgotPasswordDialog,
-    MusicHomeComponent
+    MusicHomeComponent,
+    MusicShopComponent,
+    SportShopComponent
   ],
   imports: [
     BrowserModule,

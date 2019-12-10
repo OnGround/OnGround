@@ -1,0 +1,88 @@
+<body>
+  <app-navbar
+    [switchMsg]="switchMsg"
+    [switchBtn]="switchBtn"
+    [img]="img"
+    [linkrouter]="linkrouter"
+  ></app-navbar>
+  <div class="row">
+    <div class="card col-md-3 itemheader">
+      <div>
+        <img
+          class="imgwidth"
+          src="assets/img/music-shop/guitar.png"
+          alt="BUY"
+          (click)="category('GUITAR clicked!')"
+        />
+        <h4><b>GUITAR</b></h4>
+      </div>
+    </div>
+    <div class="card col-md-3 itemheader">
+      <img
+        class="imgwidth"
+        src="assets/img/music-shop/harmonium.png"
+        alt="LEARN"
+        (click)="category('HARMONIUM clicked!')"
+      />
+      <h4><b>HARMONIUM</b></h4>
+    </div>
+    <div class="card col-md-3 itemheader">
+      <img
+        class="imgwidth"
+        src="assets/img/music-shop/FLUTE.png"
+        alt="PLAY"
+        (click)="category('FLUTE clicked!')"
+      />
+      <h4><b>FLUTE</b></h4>
+    </div>
+    <div class="card col-md-3 itemheader">
+      <img
+        class="imgwidth"
+        src="assets/img/music-shop/PIANO.png"
+        alt="PLAY"
+        (click)="category('PIANO clicked!')"
+      />
+      <h4><b>PIANO</b></h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="card col-md-3 itemheader">
+      <div>
+        <img
+          class="imgwidth"
+          src="assets/img/music-shop/CAJON.png"
+          alt="BUY"
+          (click)="category('CAJON clicked!')"
+        />
+        <h4><b>CAJON</b></h4>
+      </div>
+    </div>
+    <div class="card col-md-3 itemheader">
+      <img
+        class="imgwidth"
+        src="assets/img/music-shop/MANDOLIN.png"
+        alt="LEARN"
+        (click)="category('MANDOLIN clicked!')"
+      />
+      <h4><b>MANDOLIN</b></h4>
+    </div>
+    <div class="card col-md-3 itemheader">
+      <img
+        class="imgwidth"
+        src="assets/img/music-shop/DRUM.png"
+        alt="PLAY"
+        (click)="category('DRUM clicked!')"
+      />
+      <h4><b>DRUM</b></h4>
+    </div>
+    <div class="card col-md-3 itemheader">
+      <img
+        class="imgwidth"
+        src="assets/img/music-shop/DRUM.png"
+        alt="PLAY"
+        (click)="category('DRUM clicked!')"
+      />
+      <h4><b>DRUM</b></h4>
+    </div>
+  </div>
+</body>
