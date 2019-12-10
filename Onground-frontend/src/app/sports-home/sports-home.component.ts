@@ -11,10 +11,12 @@ export class SportsHomeComponent implements OnInit {
   switchMsg;
   switchBtn;
   img;
+  linkrouter;
   ngOnInit() {
     this.switchMsg = "Switch to Music";
     this.switchBtn = false;
     this.img = require("../../assets/img/sport.png");
+    this.linkrouter = "/musichome";
   }
 
   constructor() {}
