@@ -1,0 +1,48 @@
+.card {
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.imgwidth {
+  width: 300px;
+}
+.item1 {
+  margin-left: 90px;
+}
+.item2 {
+  margin-left: 60px;
+}
+.item3 {
+  margin-left: 38px;
+}
+.item4 {
+  margin-left: 294px;
+}
+.item5 {
+  margin-left: 53px;
+}
+.buyitem1 {
+  margin-left: 217px;
+}
+.learnitem2 {
+  margin-left: 183px;
+}
+.playitem3 {
+  margin-left: 169px;
+}
+.teamitem4 {
+  margin-left: 415px;
+}
+.competeitem5 {
+  margin-left: 157px;
+}
+
+// .colwhite {
+//   color: white;
+// }
