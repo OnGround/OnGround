@@ -6,49 +6,50 @@
     [linkrouter]="linkrouter"
   ></app-navbar>
   <div class="row">
-    <div class="card col-md-4">
+    <div class="card col-md-4 itemheader">
       <div>
         <img
-          class="item1 imgwidth"
           src="assets/img/buy.png"
+          class="imgwidth"
           alt="BUY"
-          (click)="category('Buy clicked!')"
+          (click)="buy()"
         />
-        <h4 class="buyitem1"><b>BUY</b></h4>
+        <h4><b>BUY</b></h4>
       </div>
     </div>
-    <div class="card col-md-4">
+    <div class="card col-md-4 itemheader">
       <img
-        class="imgwidth item2"
         src="assets/img/class.png"
         alt="LEARN"
+        class="imgwidth"
         (click)="category('Learn clicked!')"
       />
-      <h4 class="learnitem2"><b>LEARN</b></h4>
+      <h4><b>LEARN</b></h4>
     </div>
-    <div class="card col-md-4">
+    <div class="card col-md-4 itemheader">
       <img
-        class="imgwidth item3"
         src="assets/img/studio.png"
+        class="imgwidth"
         alt="PLAY"
         (click)="category('Play clicked!')"
       />
-      <h4 class="playitem3"><b>PLAY</b></h4>
+      <h4><b>PLAY</b></h4>
     </div>
   </div>
   <div class="row">
-    <div class="card col-md-6" (click)="category('Team clicked!')">
-      <img class="item4 imgwidth" src="assets/img/musicteam.png" alt="TEAM" />
-      <h4 class="teamitem4"><b>TEAM</b></h4>
+    <div class="card col-md-2"></div>
+    <div class="card col-md-4 itemheader" (click)="category('Team clicked!')">
+      <img class="imgwidth" src="assets/img/musicteam.png" alt="TEAM" />
+      <h4><b>TEAM</b></h4>
     </div>
-    <div class="card col-md-6">
+    <div class="card col-md-4 itemheader">
       <img
-        class="imgwidth item5"
+        class="imgwidth"
         src="assets/img/musiccompetition.png"
         alt="COMPETE"
         (click)="category('Compete clicked!')"
       />
-      <h4 class="competeitem5"><b>COMPETE</b></h4>
+      <h4><b>COMPETE</b></h4>
     </div>
   </div>
 </body>

@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { MenuItem } from "primeng/api";
 import { Router } from "@angular/router";
 declare var require: any;
 
@@ -19,8 +18,10 @@ export class MusicHomeComponent implements OnInit {
     this.img = require("../../assets/img/musiclogo.png");
     this.linkrouter = "/sporthome";
   }
-
-  constructor() {}
+  buy() {
+    this.router.navigateByUrl("/musicshop");
+  }
+  constructor(private router: Router) {}
 
   category(msg) {
     alert(msg);

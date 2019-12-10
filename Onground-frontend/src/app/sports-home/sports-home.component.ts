@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { MenuItem } from "primeng/api";
+import { Router } from "@angular/router";
 declare var require: any;
 
 @Component({
@@ -19,8 +19,10 @@ export class SportsHomeComponent implements OnInit {
     this.linkrouter = "/musichome";
   }
 
-  constructor() {}
-
+  constructor(private router: Router) {}
+  buy() {
+    this.router.navigateByUrl("/sportshop");
+  }
   category(msg) {
     alert(msg);
   }
