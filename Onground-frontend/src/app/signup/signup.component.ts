@@ -55,18 +55,14 @@ export class SignupComponent implements OnInit {
     Validators.required,
     checkMobileValidator()
   ]);
-  constructor(private userLoginService: UserLoginServiceService) {}
+  constructor(private userLoginService: UserLoginServiceService) { }
 
   matcher = new MyErrorStateMatcher();
 
   allValid() {
-    return (
-      this.emailFormControl.valid &&
-      this.usernameFormControl.valid &&
-      this.passwordFormControl.valid &&
-      this.repasswordFormControl.valid &&
-      this.mobileFormControl.valid
-    );
+    return (this.emailFormControl.valid && this.usernameFormControl.valid
+      && this.passwordFormControl.valid && this.repasswordFormControl.valid &&
+      this.mobileFormControl.valid);
   }
 
   onsubmit() {
@@ -103,7 +99,7 @@ export class SignupComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
   ngOnChanges(changes: any) {
     if (!this.signup) {
       this.emailFormControl.reset();
@@ -124,9 +120,8 @@ export function forbiddenNameValidator(): ValidatorFn {
     const validUsername = username.test(control.value);
     if (control.value && control.value !== control.value.toLowerCase())
       lower = false;
-    if (!lower && control.value != "")
-      return { notLower: { value: control.value } };
-    if (!validUsername && control.value != "")
+    if (!lower && control.value != "") return { notLower: { value: control.value } };
+    if ((!validUsername) && control.value != "")
       return { forbiddenName: { value: control.value } };
     else return null;
   };
@@ -135,7 +130,7 @@ export function forbiddenNameValidator(): ValidatorFn {
 export function checkSameValidator(passwordFormControl: any): ValidatorFn {
   return (control: AbstractControl): { [key: string]: any } | null => {
     const same = control.value === passwordFormControl.value;
-    if (!same && control.value != "")
+    if ((!same) && control.value != "")
       return { different: { value: control.value } };
     else return null;
   };
@@ -145,8 +140,9 @@ export function checkMobileValidator(): ValidatorFn {
   return (control: AbstractControl): { [key: string]: any } | null => {
     const mobile = /^[+\d]?\d{8,}$/;
     const valid = mobile.test(control.value);
-    if (!valid && control.value != "")
+    if ((!valid) && control.value != "")
       return { notValid: { value: control.value } };
     else return null;
   };
 }
+

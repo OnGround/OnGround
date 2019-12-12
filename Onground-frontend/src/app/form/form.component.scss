@@ -1,8 +1,12 @@
 .container {
   padding: 20px 15px;
+  margin-left: 15%;
   font-family: "Roboto", sans-serif;
   /* height: 800px; */
 }
+// .row {
+//   width: 100%;
+// }
 .tile {
   /* display: inline-block; */
   width: 100%;
@@ -19,8 +23,8 @@
 
 .signup {
   position: absolute;
-  width: 50%;
-  top: 12%;
+  width: 100%;
+  top: 8%;
   right: -67%;
   overflow: hidden;
   /* transform: rotate(90deg); */
@@ -29,7 +33,7 @@
 }
 .login {
   position: absolute;
-  top: 12%;
+  top: 8%;
   width: 100%;
   right: -67%;
   overflow: hidden;
@@ -41,7 +45,7 @@
 .show {
   position: relative !important;
   width: 100%;
-  top: 12%;
+  top: 8%;
   left: auto;
   right: 0px;
   transform: rotate(-0deg);
@@ -72,6 +76,11 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .container,
+  .row {
+    width: 100vh;
+    margin-left: auto;
+  }
   .image {
     opacity: 0.3;
     position: absolute;
@@ -79,13 +88,13 @@
     height: 100%;
   }
   .signup {
-    width: 200%;
-    margin-left: 35%;
+    width: 100%;
+    margin-left: 25%;
     padding: 0;
   }
   .login {
-    width: 200%;
-    margin-left: 35%;
+    width: 100%;
+    margin-left: 25%;
     padding: 0;
   }
   .show {
@@ -96,9 +105,16 @@
     left: 25%;
     /* font-size: 120%; */
   }
+  .text {
+    width: 100%;
+    padding-bottom: 50px;
+  }
 }
 
 .headerBorder {
   text-shadow: 3px 3px #ff0000;
   transition: text-shadow 0.5s ease;
+}
+.hidden {
+  display: none;
 }

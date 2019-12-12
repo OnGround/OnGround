@@ -73,4 +73,4 @@ const appRoutes: Routes = [
   bootstrap: [AppComponent],
   entryComponents: [ForgotPasswordDialog]
 })
-export class AppModule {}
+export class AppModule { }

@@ -8,10 +8,10 @@ import { ViewEncapsulation } from "@angular/core";
   encapsulation: ViewEncapsulation.None
 })
 export class HomePageComponent implements OnInit {
-  constructor() {}
+  constructor() { }
   leftHover = 0;
   rightHover = 0;
-  spaces = "-------------------------";
+  spaces = "                   ";
 
   onLeftButtonHover() {
     this.leftHover = 1;
@@ -28,5 +28,5 @@ export class HomePageComponent implements OnInit {
     this.rightHover = 0;
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
