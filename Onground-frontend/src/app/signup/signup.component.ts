@@ -97,6 +97,11 @@ export class SignupComponent implements OnInit {
       this.repasswordFormControl.reset();
       this.mobileFormControl.reset();
     }
+    this.emailFormControl.setErrors(null);
+    this.usernameFormControl.setErrors(null);
+    this.passwordFormControl.setErrors(null);
+    this.repasswordFormControl.setErrors(null);
+    this.mobileFormControl.setErrors(null);
   }
 
   ngOnInit() { }

@@ -11,7 +11,8 @@ export class NavbarComponent implements OnInit {
   @Input() switchBtn;
   @Input() img;
   @Input() linkrouter: any;
+  loggedIn = 0;
 
-  constructor(private router: Router) {}
-  ngOnInit() {}
+  constructor(private router: Router) { }
+  ngOnInit() { }
 }
