@@ -1,0 +1,75 @@
+<!-- <img src="../../assets/img/court.jpg" width="100%" height="100%" class="image"> -->
+<div class="img"></div>
+<div class="full" >
+<h4 class="header"> <strong>Stop Being Virtual, Start Being Real</strong></h4>
+<div class="body">
+<form #userlogin="ngForm" class="example-form" (ngSubmit)="findResults()">
+  <div>
+    <mat-form-field class="Input" floatLabel="never" appearance="none"  style="width: 200px;">
+      <div class="outerDiv">
+        <input
+          matInput
+          placeholder="Type"
+          [formControl]="typeCtrl"
+          class="formInput"
+          aria-label="State"
+          [matAutocomplete]="auto"
+          [errorStateMatcher]="matcher"
+        />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let state of filteredStates | async" [value]="state.type">
+            <span>{{state.type}}</span>
+          </mat-option>
+        </mat-autocomplete>
+      </div>
+    </mat-form-field>
+    <mat-form-field class="Input" floatLabel="never" appearance="none" style="width: 400px;">
+      <div class="outerDiv" >
+        <input
+          matInput
+          placeholder="Location/state"
+          [formControl]="locationCtrl"
+          class="formInput"
+          [errorStateMatcher]="matcher"
+          [matAutocomplete]="auto1"
+        />
+        <mat-autocomplete #auto1="matAutocomplete">
+          <mat-option *ngFor="let state of filteredLocations | async" [value]="state.location">
+            <span>{{state.location}}</span> 
+            <!-- <small>Details: {{state.details}}</small> -->
+          </mat-option>
+        </mat-autocomplete>
+      </div>
+    </mat-form-field>
+    <button class="submitButton">
+      find
+    </button>
+  </div>
+</form>
+
+<mat-list class="Results" *ngIf="display === 1 else nodisplay">
+  <h3 mat-subheader style="color: black;">Results</h3>
+  <div *ngIf="result.length > 0 else norecords" >
+  
+  <mat-list-item *ngFor="let state of result;let ind = index"
+  (click)="resultClicked(ind)" class="result">
+  <!-- <div> -->
+    <mat-icon mat-list-icon>location_on</mat-icon>
+    <h4 mat-line>{{state.type}}</h4>
+    <p mat-line> {{state.location}} </p>
+  <!-- </div> -->
+  </mat-list-item>
+</div>
+  <ng-template #norecords>
+    <div style="text-align: center; padding: 10px 0px;">
+    No Records Found
+  </div>
+  </ng-template>
+  
+</mat-list>
+<ng-template #nodisplay>
+  
+</ng-template>
+
+</div>
+</div>

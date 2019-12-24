@@ -13,6 +13,7 @@ import { HomePageComponent } from "./home-page/home-page.component";
 import { ForgotPasswordDialog, LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { FormComponent } from "./form/form.component";
+import { MatListModule } from '@angular/material/list';
 import { DialogContentComponent } from "./dialog-content/dialog-content.component";
 import {
   MatIconModule,
@@ -27,6 +28,8 @@ import {
 import { MusicHomeComponent } from "./music-home/music-home.component";
 import { MusicShopComponent } from "./music-shop/music-shop.component";
 import { SportShopComponent } from "./sport-shop/sport-shop.component";
+import { CourtBookingComponent } from './court-booking/court-booking.component';
+
 
 const appRoutes: Routes = [
   { path: "sporthome", component: SportsHomeComponent },
@@ -50,7 +53,8 @@ const appRoutes: Routes = [
     ForgotPasswordDialog,
     MusicHomeComponent,
     MusicShopComponent,
-    SportShopComponent
+    SportShopComponent,
+    CourtBookingComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +71,8 @@ const appRoutes: Routes = [
     MatChipsModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],
