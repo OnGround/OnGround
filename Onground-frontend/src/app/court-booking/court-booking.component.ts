@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
 import { CourtBookingService, Sports } from '../court-booking.service';
+declare var require: any;
 
 export interface State {
   flag: string;
@@ -16,14 +17,19 @@ export interface State {
   styleUrls: ['./court-booking.component.scss']
 })
 export class CourtBookingComponent implements OnInit {
-
   typeCtrl = new FormControl();
+  typeFocus = 0;
+  locationFocus = 0;
   locationCtrl = new FormControl();
   filteredStates: Observable<Sports[]>;
   filteredLocations: Observable<Sports[]>;
   result: any = [];
   display: number = 0;
   states: Sports[] = this.courtBooking.states;
+  switchMsg;
+  switchBtn;
+  img;
+  linkrouter;
 
   constructor(private courtBooking: CourtBookingService) {
     this.filteredStates = this.typeCtrl.valueChanges
@@ -63,6 +69,10 @@ export class CourtBookingComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.switchMsg = "Switch to Music";
+    this.switchBtn = false;
+    this.img = require("../../assets/img/sport.png");
+    this.linkrouter = "/musichome";
   }
 
 }

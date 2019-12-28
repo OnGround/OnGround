@@ -33,12 +33,13 @@ import { CourtBookingComponent } from './court-booking/court-booking.component';
 
 const appRoutes: Routes = [
   { path: "sporthome", component: SportsHomeComponent },
-  { path: "home", component: HomePageComponent },
+  { path: "", component: HomePageComponent },
   { path: "form", component: FormComponent },
   // { path: "signup", component: SignupComponent },
   { path: "musichome", component: MusicHomeComponent },
   { path: "musicshop", component: MusicShopComponent },
-  { path: "sportshop", component: SportShopComponent }
+  { path: "sportshop", component: SportShopComponent },
+  { path: "courtbooking", component: CourtBookingComponent }
 ];
 @NgModule({
   declarations: [

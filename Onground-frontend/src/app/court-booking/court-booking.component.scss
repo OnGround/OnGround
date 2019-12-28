@@ -45,9 +45,6 @@
   box-sizing: border-box;
   transition: background-color 1s;
 }
-.formInput:hover {
-  background-color: #f8d4d4;
-}
 
 .Results {
   width: 60%;
@@ -137,14 +134,55 @@ full::before {
   left: 0;
   background-image: url(../../assets/img/court.jpg);
   background-size: cover;
-  filter: blur(3px);
+  // filter: blur(9px);
+  opacity: 0.2;
   // opacity: 0.5;
   height: 85%;
   width: 100%;
-  -webkit-filter: blur(3px);
+  // -webkit-filter: blur(9px);
 }
 
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0;
   // height: 2em;
 }
+
+.dropdown {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+// .mat-autocomplete-panel {
+//   margin-top: 10px !important;
+//   border-radius: 100px !important;
+//   background-color: red !important;
+//   color: blue($color: #000000);
+// }
+
+::ng-deep .mat-autocomplete-panel.autocomplete {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 10px;
+  max-height: 300px;
+}
+.mat-autocomplete-panel.autocomplete::-webkit-scrollbar {
+  width: 0;
+  display: none;
+  background: transparent;
+}
+
+// ::ng-deep .cdk-overlay-pane {
+//   /* Do you changes here */
+//   border-radius: 50px !important;
+//   background-color: red($color: #000000) !important;
+//   width: 300px !important;
+// }
+
+// :host ::ng-deep .mat-autocomplete-panel {
+//   width: 300px !important;
+// }

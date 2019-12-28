@@ -19,9 +19,12 @@ export class SportsHomeComponent implements OnInit {
     this.linkrouter = "/musichome";
   }
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   buy() {
     this.router.navigateByUrl("/sportshop");
+  }
+  courtBooking() {
+    this.router.navigateByUrl("/courtbooking");
   }
   category(msg) {
     alert(msg);
