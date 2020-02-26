@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { Routes, RouterModule } from "@angular/router";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { HomePageComponent } from "./home-page/home-page.component";
-import { ForgotPasswordDialog, LoginComponent } from "./login/login.component";
+import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { FormComponent } from "./form/form.component";
 import { DialogContentComponent } from "./dialog-content/dialog-content.component";
@@ -27,6 +27,7 @@ import {
 import { MusicHomeComponent } from "./music-home/music-home.component";
 import { MusicShopComponent } from "./music-shop/music-shop.component";
 import { SportShopComponent } from "./sport-shop/sport-shop.component";
+import { RegisterComponent } from "./register/register.component";
 
 const appRoutes: Routes = [
   { path: "sporthome", component: SportsHomeComponent },
@@ -35,7 +36,9 @@ const appRoutes: Routes = [
   // { path: "signup", component: SignupComponent },
   { path: "musichome", component: MusicHomeComponent },
   { path: "musicshop", component: MusicShopComponent },
-  { path: "sportshop", component: SportShopComponent }
+  { path: "sportshop", component: SportShopComponent },
+  { path: "register", component: RegisterComponent },
+  { path: "login", component: LoginComponent }
 ];
 @NgModule({
   declarations: [
@@ -47,10 +50,10 @@ const appRoutes: Routes = [
     DialogContentComponent,
     FormComponent,
     SignupComponent,
-    ForgotPasswordDialog,
     MusicHomeComponent,
     MusicShopComponent,
-    SportShopComponent
+    SportShopComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +74,6 @@ const appRoutes: Routes = [
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ForgotPasswordDialog]
+  entryComponents: []
 })
 export class AppModule {}

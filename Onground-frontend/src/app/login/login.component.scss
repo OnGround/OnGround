@@ -1,78 +1,133 @@
-.example-form {
-  padding: 10px;
-}
-
-.Input {
-  /* border: 2px solid black; */
-  width: 300px;
-}
-
-.outerDiv {
-  height: 20px;
-  padding: 1px;
-  display: flex;
-  /* border: 1px solid gray; */
-  border-radius: 10px;
-  font: 15px/24px "Muli", sans-serif;
-  color: #333;
-  width: 100%;
-  box-sizing: border-box;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-.formInput {
-  position: relative;
-  bottom: 10px;
-  width: 38 0px;
-  display: flex;
-  background-color: #fff;
-  color: #000;
-  font: inherit;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
-  border: 1px solid black;
-  border-radius: 30px;
-  outline: 0;
-  padding: 22px 0px;
-  text-indent: 30px;
-  box-sizing: border-box;
-  transition: background-color 1s;
-}
-.formInput:hover {
-  background-color: #f8d4d4;
-}
-
-.mat-dialog-container {
-  background-color: #000;
-}
-
-.submitButton {
-  cursor: pointer;
+.bgcolor {
   background-color: black;
+  height: 100vh;
+}
+.headingtext {
   color: white;
-  height: 40px;
-  width: 200px;
-  border-radius: 30px;
-  font: 15px/24px "Muli", sans-serif;
-  font-size: large;
-  margin-top: 20px;
-  margin-left: 15%;
-  border: 0;
+  margin-top: 20%;
+  font-size: 230%;
+}
+.msgheader {
+  color: white;
+  font-size: 100%;
+  margin-bottom: 5%;
+}
+.groundimage {
+  // margin-left: 34%;
+  // margin-top: 40%;
+  // margin-bottom: 100%;
+  // width: 250px;
+  // height: 250px;
+  // margin-left: auto;
+  // margin-right: auto;
+  // display: block;
+  position: absolute;
+  margin: auto;
+  // top: 540px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.icon {
+  width: 8%;
+  padding-left: 0%;
+  position: absolute;
+  margin: 8px;
+}
+.input-field {
+  width: 100%;
+  padding-left: 45px;
   outline: none;
+  height: 100%;
+  border-radius: 10px;
+}
+.inputstyle {
+  height: 50px;
+  width: 58%;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3%;
 }
 
-.bounce {
-  animation: bounce 500ms;
+.btnfacebook {
+  position: absolute;
+  width: 3%;
+  height: 10%;
+  cursor: pointer;
+  bottom: 88px;
+  left: 75px;
+  padding-bottom: 10px;
 }
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+.btntwitter {
+  position: absolute;
+  width: 3%;
+  height: 10%;
+  cursor: pointer;
+  bottom: 60px;
+  left: 75px;
+  padding-bottom: 10px;
+}
+.btninsta {
+  position: absolute;
+  width: 3%;
+  height: 10%;
+  cursor: pointer;
+  bottom: 35px;
+  left: 75px;
+  padding-bottom: 10px;
+}
+.rememberme {
+  color: white;
+  margin-top: 2%;
+  font-weight: 100;
+}
+.forgotPassword {
+  margin-top: 1%;
+  margin-left: 4%;
+  font-weight: 100;
+  color: #0069ba;
+}
+.createbtn1 {
+  margin-top: 3%;
+  width: 42%;
+}
+.createbtn2 {
+  width: 55%;
+}
+.help {
+  width: 10%;
+}
+.footerlabel {
+  font-size: 84%;
+  color: white;
+  margin-left: 3%;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 44%;
+  right: 0;
+}
+.marginleft {
+  margin-left: -22%;
+}
+.top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  top: 0;
+}
+.bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  bottom: 0;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
 }

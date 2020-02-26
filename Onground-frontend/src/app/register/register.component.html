@@ -1,0 +1,217 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<div class="row bgcolor">
+  <div class="col-md-5 container">
+    <img class="groundimage" src="assets/img/ground.png" />
+    <img
+      src="assets/img/facebook.png"
+      class="btnfacebook"
+      alt="Facebook"
+      (click)="socialMedia('facebook')"
+    />
+    <img
+      src="assets/img/twitter.png"
+      class="btntwitter"
+      alt="Twitter"
+      (click)="socialMedia('twitter')"
+    />
+    <img
+      src="assets/img/instagram.png"
+      class="btninsta"
+      alt="Instagram"
+      (click)="socialMedia('instagram')"
+    />
+  </div>
+  <div class="col-md-7 container">
+    <h1 class="headingtext">
+      <b>CREATE<br />ACCOUNT</b>
+    </h1>
+    <div class="formcontainer">
+      <form [formGroup]="registerForm">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <label class="labelfont required">FIRST NAME:</label><br />
+              <input
+                class="form-control inputstyle"
+                type="text"
+                id="firstName"
+                formControlName="firstName"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.controls.firstName.value &&
+                  registerForm.controls.firstName.invalid
+                "
+                class="alertmsg"
+              >
+                Provide correct Information
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="labelfont required">LAST NAME:</label><br />
+              <input
+                class="form-control inputstyle"
+                type="text"
+                formControlName="lastName"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.controls.lastName.value &&
+                  registerForm.controls.lastName.invalid
+                "
+                class="alertmsg"
+              >
+                Provide correct Information
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="labelfont required">EMAIL ID:</label><br />
+              <input
+                class="form-control inputstyle"
+                type="text"
+                formControlName="email"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.controls.email.value &&
+                  registerForm.controls.email.invalid
+                "
+                class="alertmsg"
+              >
+                Provide correct Information
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="labelfont required">MOBILE NUMBER:</label><br />
+              <input
+                class="form-control inputstyle"
+                type="number"
+                formControlName="mobile"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.controls.mobile.value &&
+                  registerForm.controls.mobile.invalid
+                "
+                class="alertmsg"
+              >
+                Provide correct Information
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="labelfont required">USERNAME:</label><br />
+              <input
+                class="form-control inputstyle"
+                type="text"
+                formControlName="username"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.controls.username.value &&
+                  registerForm.controls.username.invalid
+                "
+                class="alertmsg"
+              >
+                Provide correct Information
+              </div>
+              <label class="labelfont required">PASSWORD:</label><br />
+              <input
+                class="form-control inputstyle"
+                type="password"
+                formControlName="password"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.controls.password.value &&
+                  registerForm.controls.password.invalid
+                "
+                class="alertmsg"
+              >
+                Provide correct Information
+              </div>
+              <label class="labelfont required">CONFIRM PASSWORD:</label><br />
+              <input
+                class="form-control inputstyle"
+                type="password"
+                formControlName="confirmPassword"
+                required
+              />
+              <div
+                *ngIf="
+                  registerForm.controls.confirmPassword.value &&
+                  registerForm.controls.confirmPassword.invalid
+                "
+                class="alertmsg"
+              >
+                Provide correct Information
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="file" />
+              <img
+                class="profile"
+                id="profileimage"
+                src="assets/img/registeruserwhite.png"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              class="createbtn"
+              src="assets/img/createbtn.png"
+              (click)="onSave()"
+            />
+          </div>
+        </div>
+        <div class="footer">
+          <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <img
+                    class="help"
+                    src="assets/img/contact.png"
+                    (click)="onSave()"
+                  />
+                  <label class="footerlabel">HELP</label>
+                </div>
+                <div class="col-md-6 marginleft">
+                  <img
+                    class="help"
+                    src="assets/img/contact.png"
+                    (click)="onSave()"
+                  />
+                  <label class="footerlabel">CONTACT</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
