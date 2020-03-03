@@ -1,11 +1,76 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
 <body>
-  <app-navbar
-    [switchMsg]="switchMsg"
-    [switchBtn]="switchBtn"
-    [img]="img"
-    [linkrouter]="linkrouter"
-  ></app-navbar>
-  <div class="row">
+  <app-navbar></app-navbar>
+  <div class="row bgcolor">
+    <div class="col-md-5 container">
+      <div class="top">
+        <div class="parent">
+          <img class="image1" src="assets/img/side.png" />
+          <img class="image2 groundimage" src="assets/img/football.png" />
+        </div>
+      </div>
+      <div class="bottom">
+        <img
+          src="assets/img/facebook.png"
+          class="btnfacebook"
+          alt="Facebook"
+          (click)="socialMedia('facebook')"
+        />
+        <img
+          src="assets/img/twitter.png"
+          class="btntwitter"
+          alt="Twitter"
+          (click)="socialMedia('twitter')"
+        />
+        <img
+          src="assets/img/instagram.png"
+          class="btninsta"
+          alt="Instagram"
+          (click)="socialMedia('instagram')"
+        />
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="box">
+        <img class="voucherimg" src="assets/img/voucher.png" alt="Voucher" />
+        <div class="text">
+          <h1 class="VoucherCode">{{ VoucherCode }}</h1>
+          <h1 class="Vouchermsg">{{ Vouchermsg }}</h1>
+        </div>
+      </div>
+
+      <!-- <div class="top">
+        <img class="voucherimg" src="assets/img/voucher.png" />
+      </div> -->
+    </div>
+  </div>
+  <div class="footer">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6">
+            <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+            <label class="footerlabel">HELP</label>
+          </div>
+          <div class="col-md-6 marginleft">
+            <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+            <label class="footerlabel">CONTACT</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row">
     <div class="card col-md-4 itemheader">
       <div>
         <img
@@ -51,5 +116,5 @@
       />
       <h4><b>COMPETE</b></h4>
     </div>
-  </div>
+  </div> -->
 </body>

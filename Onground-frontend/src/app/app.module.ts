@@ -14,6 +14,7 @@ import { LoginComponent } from "./login/login.component";
 import { SignupComponent } from "./signup/signup.component";
 import { FormComponent } from "./form/form.component";
 import { DialogContentComponent } from "./dialog-content/dialog-content.component";
+
 import {
   MatIconModule,
   MatInputModule,
@@ -28,17 +29,20 @@ import { MusicHomeComponent } from "./music-home/music-home.component";
 import { MusicShopComponent } from "./music-shop/music-shop.component";
 import { SportShopComponent } from "./sport-shop/sport-shop.component";
 import { RegisterComponent } from "./register/register.component";
+import { ItemComponent } from "./item/item.component";
 
 const appRoutes: Routes = [
-  { path: "sporthome", component: SportsHomeComponent },
-  { path: "home", component: HomePageComponent },
+  { path: "home", component: SportsHomeComponent },
+  // { path: "home", component: HomePageComponent },
   { path: "form", component: FormComponent },
   // { path: "signup", component: SignupComponent },
   { path: "musichome", component: MusicHomeComponent },
   { path: "musicshop", component: MusicShopComponent },
-  { path: "sportshop", component: SportShopComponent },
+  { path: "shop", component: SportShopComponent },
   { path: "register", component: RegisterComponent },
-  { path: "login", component: LoginComponent }
+  { path: "navbar", component: NavbarComponent },
+  { path: "login", component: LoginComponent },
+  { path: "item", component: ItemComponent }
 ];
 @NgModule({
   declarations: [
@@ -53,7 +57,8 @@ const appRoutes: Routes = [
     MusicHomeComponent,
     MusicShopComponent,
     SportShopComponent,
-    RegisterComponent
+    RegisterComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

@@ -7,11 +7,15 @@ import { Router } from "@angular/router";
   styleUrls: ["./navbar.component.scss"]
 })
 export class NavbarComponent implements OnInit {
-  @Input() switchMsg;
-  @Input() switchBtn;
-  @Input() img;
-  @Input() linkrouter: any;
-
+  showSearch: boolean = false;
+  home;
+  shop;
   constructor(private router: Router) {}
-  ngOnInit() {}
+  ngOnInit() {
+    this.home = "/home";
+    this.shop = "/shop";
+  }
+  searchbar() {
+    this.showSearch = !this.showSearch;
+  }
 }

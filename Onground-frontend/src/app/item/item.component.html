@@ -1,0 +1,67 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:black;">
+  <div class="bgcolor">
+    <app-navbar></app-navbar>
+    <div class="container">
+      <img class="image1" src="assets/img/pattern.png" />
+      <img class="productimage" src="assets/img/basket.png" />
+      <p class="producttext">Shop Products</p>
+    </div>
+    <h1>{{ name }}</h1>
+    <h3>Choose from the below options to proceed shopping</h3>
+    <div>
+      <img class="horizontalbar" src="assets/img/horizontalbar.png" />
+      <img class="imgstyle" src="{{ img }}" />
+      <div class="card accessoriescard">
+        <img
+          class="itemstyle"
+          src="assets/img/apparel.png"
+          alt="Avatar"
+          (click)="apparels()"
+        />
+        <div class="container1">
+          <b class="msgstyle">ACCESSORIES</b>
+        </div>
+      </div>
+      <div class="vl"></div>
+
+      <div class="card apparelcard">
+        <img
+          class="itemstyle"
+          src="assets/img/apparel.png"
+          alt="Avatar"
+          (click)="apparels()"
+        />
+        <div class="container1">
+          <b class="msgstyle">APPRARELS</b>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6">
+            <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+            <label class="footerlabel">HELP</label>
+          </div>
+          <div class="col-md-6 marginleft">
+            <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+            <label class="footerlabel">CONTACT</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

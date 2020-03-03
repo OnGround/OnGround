@@ -1,7 +1,7 @@
 .bgcolor {
   background-color: black;
   padding: 0px;
-  height: 89.5vh;
+  height: 100vh;
 }
 .groundimage {
   width: 67%;
@@ -153,9 +153,15 @@ input[type="file"] {
 
 h1 {
   text-align: center;
-  margin-top: 12%;
+  margin-top: 8%;
   color: white;
-  font-size: 165%;
+  font-size: 214%;
+}
+h3 {
+  text-align: center;
+  margin-top: 1.5%;
+  color: white;
+  font-size: 121%;
 }
 
 .itemstyle {
@@ -187,8 +193,38 @@ h1 {
 .card {
   margin: 0 auto;
 }
+.accessoriescard {
+  margin-top: 13%;
+  margin-left: 45%;
+  position: absolute;
+}
+.apparelcard {
+  position: absolute;
+  margin-top: 13%;
+  margin-left: 71%;
+}
 .card:hover {
   // -ms-transform: scale(1.5); /* IE 9 */
   // -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.25);
+}
+.horizontalbar {
+  float: right !important;
+  width: 83%;
+  margin-top: 10%;
+}
+.imgstyle {
+  margin-top: 3%;
+  width: 24%;
+  margin-left: 16%;
+  height: 55%;
+  position: absolute;
+}
+.vl {
+  border-left: 1px solid white;
+  height: 19%;
+  position: absolute;
+  left: 63%;
+  margin-top: 27%;
+  top: 0;
 }

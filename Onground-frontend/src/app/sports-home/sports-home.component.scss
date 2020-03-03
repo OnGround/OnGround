@@ -1,18 +1,170 @@
-.card {
-  transition: 0.3s;
-  border-radius: 5px;
+.bgcolor {
+  background-color: black;
+  padding: 0px;
+  height: 99.8vh;
 }
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.groundimage {
+  width: 67%;
+  height: fit-content;
+  margin-top: 14%;
+  margin-left: 40%;
 }
-
 .container {
-  padding: 2px 16px;
+  padding: 0px;
+  // height: -webkit-fill-available;
 }
-.imgwidth {
-  width: 300px;
+.container .btnfacebook {
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  width: 3%;
+  height: 3%;
+  cursor: pointer;
 }
+.container .btntwitter {
+  position: absolute;
+  top: 97%;
+  left: 10%;
+  width: 3%;
+  height: 3%;
+  cursor: pointer;
+}
+.container .btninsta {
+  position: absolute;
+  top: 104%;
+  left: 10%;
+  width: 3%;
+  height: 3%;
+  cursor: pointer;
+}
+.formcontainer {
+  padding-left: 3%;
+  padding-top: 2%;
+}
+.headingtext {
+  color: white;
+  font-size: 172%;
+  padding-left: 5%;
+  padding-top: 1%;
+}
+.labelfont {
+  font-size: 95%;
+  color: white;
+  padding-bottom: 1%;
+}
+.inputstyle {
+  border: 1px solid #0069ba;
+  background-color: black;
+  // height: 10%;
+  width: 80%;
+  color: white;
+  font-size: 100%;
+  margin-bottom: 3%;
+}
+.profile {
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 31%;
+}
+.createbtn {
+  margin-top: 1%;
+  width: 50%;
+}
+.help {
+  width: 10%;
+}
+.footerlabel {
+  font-size: 84%;
+  color: white;
+  margin-left: 3%;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 44%;
+  right: 0;
+}
+.marginleft {
+  margin-left: -22%;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+// .ng-valid[required],
+// .ng-valid.required {
+//   border: 5px solid #42a948; /* green */
+// }
 
-.itemheader {
+// .ng-invalid:not(form) {
+//   border: 1px solid #a94442; /* red */
+// }
+.alertmsg {
+  color: red;
+}
+.labelfont.required:after {
+  color: #d00;
+  content: "*";
+  margin-left: 5px;
+  top: 5px;
+}
+.invalid-feedback {
+  color: red;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+input[type="file"] {
+  visibility: hidden;
+}
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: absolute;
+  top: -15%;
+  height: 66%;
+  width: 59%;
+}
+// .image2 {
+//   position: relative;
+//   top: 30px;
+//   left: 30px;
+// }
+.voucherimg {
+  margin-top: 35%;
+  width: 128%;
+  margin-left: 66%;
+}
+.box {
+  position: relative;
+  display: inline-block; /* Make the width of box same as image */
+}
+.box .text {
+  position: absolute;
+  z-index: 999;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 60%; /* Set the width of the positioned div */
+}
+.Vouchermsg {
+  margin-left: 200%;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  margin-top: -18%;
+  text-align: center;
+  width: 116px;
+  line-height: 1.4;
+}
+.VoucherCode {
+  color: white;
+  margin-left: 90%;
+  font-size: 13px;
   text-align: center;
 }

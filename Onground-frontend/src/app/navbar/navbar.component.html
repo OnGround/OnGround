@@ -8,55 +8,62 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color:black;">
   <div class="row">
     <div class="col-md-2">
-      <img alt="Brand" class="logo" src="assets/img/logo.png" />
+      <label class="company">ONGROUND</label>
     </div>
-    <div class="col-md-2">
-      <img alt="Brand" class="company" src="assets/img/company.png" />
-    </div>
-    <div class="col-md-5">
-      <input
-        class="searchbar"
-        type="text"
-        placeholder="Search..."
-        name="search"
-      />
-    </div>
-    <div class="col-md-3">
-      <img alt="Brand" class="sport" src="{{ img }}" />
-    </div>
-  </div>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" [routerLink]="linkrouter"
-          ><label class="switch">
-            <input type="checkbox" [checked]="switchBtn" disabled />
-            <span class="slider round"></span>
-          </label>
-          <span class="ml-15">{{ switchMsg }}</span></a
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="!showSearch">
+        <a
+          [routerLink]="[home]"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="headernav margin-left120px"
+          >HOME</a
         >
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="#"
-            ><span class="glyphicon glyphicon-shopping-cart"></span> Cart
-          </a>
-        </li>
-        <li>
-          <a href="#"
-            ><span class="glyphicon glyphicon-heart"></span> Wishlist
-          </a>
-        </li>
-        <li>
-          <a [routerLink]="['/login']" href="#"
-            ><span class="glyphicon glyphicon-user"></span>
-            Account
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      </li>
+      <li *ngIf="!showSearch">
+        <a
+          [routerLink]="[shop]"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="headernav"
+          >SHOP</a
+        >
+      </li>
+      <li *ngIf="!showSearch">
+        <a href="#" class="headernav">COURT BOOKING</a>
+      </li>
+      <li *ngIf="!showSearch">
+        <a href="#" class="headernav">LEARN</a>
+      </li>
+      <li *ngIf="!showSearch">
+        <a href="#" class="headernav">EVENTS</a>
+      </li>
+      <li *ngIf="!showSearch">
+        <a href="#" class="headernav">TEAM</a>
+      </li>
+      <li *ngIf="showSearch">
+        <input
+          class="searchbar"
+          type="text"
+          placeholder="Search..."
+          name="search"
+        />
+      </li>
+      <li>
+        <i class="glyphicon glyphicon-search" (click)="searchbar()"></i>
+      </li>
+      <li>
+        <img src="assets/img/wishlist.png" class="wishlist" />
+      </li>
+      <li>
+        <img src="assets/img/cart.png" class="cart" />
+      </li>
+      <li>
+        <img src="assets/img/account.png" class="account" />
+      </li>
+    </ul>
+  </div>
 </body>

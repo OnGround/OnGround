@@ -1,88 +1,49 @@
-<body>
-  <app-navbar
-    [switchMsg]="switchMsg"
-    [switchBtn]="switchBtn"
-    [img]="img"
-    [linkrouter]="linkrouter"
-  ></app-navbar>
-  <div class="row">
-    <div class="card col-md-3 itemheader">
-      <div>
-        <img
-          class="imgwidth"
-          src="assets/img/sport-shop/BADMINTON.png"
-          alt="BUY"
-          (click)="category('BADMINTON clicked!')"
-        />
-        <h4><b>BADMINTON</b></h4>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:black;">
+  <app-navbar></app-navbar>
+  <div class="container">
+    <img class="image1" src="assets/img/pattern.png" />
+    <img class="productimage" src="assets/img/basket.png" />
+    <p class="producttext">Shop Products</p>
+  </div>
+  <h1>CHOOSE SPORT</h1>
+  <div class="row rowstyle">
+    <div class="card col-md-2" *ngFor="let item of items">
+      <img
+        class="itemstyle"
+        src="{{ item.img }}"
+        alt="Avatar"
+        (click)="itemPage(item)"
+      />
+      <div class="container1">
+        <b class="msgstyle">{{ item.name }}</b>
       </div>
-    </div>
-    <div class="card col-md-3 itemheader">
-      <img
-        class="imgwidth"
-        src="assets/img/sport-shop/BASKETBALL.png"
-        alt="LEARN"
-        (click)="category('BASKETBALL clicked!')"
-      />
-      <h4><b>BASKETBALL</b></h4>
-    </div>
-    <div class="card col-md-3 itemheader">
-      <img
-        class="imgwidth"
-        src="assets/img/sport-shop/BOXING.png"
-        alt="PLAY"
-        (click)="category('BOXING clicked!')"
-      />
-      <h4><b>BOXING</b></h4>
-    </div>
-    <div class="card col-md-3 itemheader">
-      <img
-        class="imgwidth"
-        src="assets/img/sport-shop/CRICKET.png"
-        alt="PLAY"
-        (click)="category('CRICKET clicked!')"
-      />
-      <h4><b>CRICKET</b></h4>
     </div>
   </div>
-  <div class="row">
-    <div class="card col-md-3 itemheader">
-      <div>
-        <img
-          class="imgwidth"
-          src="assets/img/sport-shop/CYCLE.png"
-          alt="BUY"
-          (click)="category('CYCLE clicked!')"
-        />
-        <h4><b>CYCLE</b></h4>
+  <!-- <div class="footer"> -->
+  <div class="row marginleft64">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+          <label class="footerlabel">HELP</label>
+        </div>
+        <div class="col-md-6 marginleft">
+          <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+          <label class="footerlabel">CONTACT</label>
+        </div>
       </div>
     </div>
-    <div class="card col-md-3 itemheader">
-      <img
-        class="imgwidth"
-        src="assets/img/sport-shop/FOOTBALL.png"
-        alt="LEARN"
-        (click)="category('FOOTBALL clicked!')"
-      />
-      <h4><b>FOOTBALL</b></h4>
-    </div>
-    <div class="card col-md-3 itemheader">
-      <img
-        class="imgwidth"
-        src="assets/img/sport-shop/TABLE-TENNIS.png"
-        alt="PLAY"
-        (click)="category('TABLE-TENNIS clicked!')"
-      />
-      <h4><b>TABLE-TENNIS</b></h4>
-    </div>
-    <div class="card col-md-3 itemheader">
-      <img
-        class="imgwidth"
-        src="assets/img/sport-shop/VOLLEYBALL.png"
-        alt="PLAY"
-        (click)="category('VOLLEYBALL clicked!')"
-      />
-      <h4><b>VOLLEYBALL</b></h4>
-    </div>
+    <!-- </div> -->
   </div>
 </body>
