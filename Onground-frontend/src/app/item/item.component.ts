@@ -19,4 +19,7 @@ export class ItemComponent implements OnInit {
       this.img = params["item_img"];
     });
   }
+  onClickItem(details) {
+    this.router.navigateByUrl("/" + details + "/products");
+  }
 }

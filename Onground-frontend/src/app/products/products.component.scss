@@ -1,7 +1,7 @@
 .bgcolor {
   background-color: black;
   padding: 0px;
-  height: 100vh;
+  height: 89.5vh;
 }
 .groundimage {
   width: 67%;
@@ -152,22 +152,20 @@ input[type="file"] {
 }
 
 h1 {
-  text-align: center;
-  margin-top: 8%;
+  margin-left: 3%;
+  text-align: left;
+  margin-top: 9%;
   color: white;
-  font-size: 214%;
-}
-h3 {
-  text-align: center;
-  margin-top: 1.5%;
-  color: white;
-  font-size: 121%;
+  font-size: 165%;
 }
 
 .itemstyle {
   width: 40%;
-  height: 95px;
+  height: 19vh;
   margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 20%;
 }
 .divstyle {
   padding: 8% 4%;
@@ -176,10 +174,29 @@ h3 {
 
   // margin-left: 10%;
 }
+div .b {
+  text-align: center;
+}
 .msgstyle {
   color: white;
   text-align: center;
-  display: inline-block;
+  position: absolute;
+  margin-top: 60%;
+  position: absolute;
+  top: 0;
+  left: 14%;
+  font-size: 20px;
+}
+.pricestyle {
+  color: white;
+  text-align: center;
+  position: absolute;
+  margin-top: 68%;
+  position: absolute;
+  top: 0;
+  left: 14%;
+  font-size: 21px;
+  color: yellowgreen;
 }
 .rowstyle {
   margin: 3% 2% 0% 7%;
@@ -192,120 +209,37 @@ h3 {
 }
 .card {
   margin: 0 auto;
+  position: relative;
+  margin-bottom: 27%;
 }
-.accessoriescard {
-  margin-top: 13%;
-  margin-left: 45%;
-  position: absolute;
-}
-.apparelcard {
-  position: absolute;
-  margin-top: 13%;
-  margin-left: 71%;
-}
-.card:hover {
+
+// .card:hover {
+//   // -ms-transform: scale(1.5); /* IE 9 */
+//   // -webkit-transform: scale(1.5); /* Safari 3-8 */
+//   transform: scale(1.25);
+// }
+.itemstyle:hover {
   // -ms-transform: scale(1.5); /* IE 9 */
   // -webkit-transform: scale(1.5); /* Safari 3-8 */
   transform: scale(1.25);
 }
-.horizontalbar {
-  float: right !important;
-  width: 83%;
-  margin-top: 10%;
-}
-.imgstyle {
-  margin-top: 3%;
-  width: 24%;
-  margin-left: 16%;
-  height: 55%;
+.boximage {
   position: absolute;
-}
-.vl {
-  border-left: 1px solid white;
-  height: 19%;
-  position: absolute;
-  left: 63%;
-  margin-top: 27%;
   top: 0;
+  height: 280px;
+  width: 76%;
 }
-.msgheader {
-  color: white;
-  font-size: 100%;
-  margin-bottom: 5%;
-}
-
-.icon {
-  width: 8%;
-  padding-left: 0%;
+.heart {
+  margin-top: 68%;
   position: absolute;
-  margin: 8px;
-}
-.input-field {
-  width: 100%;
-  padding-left: 45px;
-  outline: none;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.btnfacebook {
-  position: absolute;
-  width: 3%;
-  height: 10%;
-  cursor: pointer;
-  bottom: 35%;
-  left: 10%;
-  padding-bottom: 10px;
-}
-.btntwitter {
-  position: absolute;
-  width: 3%;
-  height: 10%;
-  cursor: pointer;
-  bottom: 24%;
-  left: 10%;
-  padding-bottom: 10px;
-}
-.btninsta {
-  position: absolute;
-  width: 3%;
-  height: 10%;
-  cursor: pointer;
-  bottom: 14%;
-  left: 10%;
-  padding-bottom: 10px;
-}
-.rememberme {
-  color: white;
-  margin-top: 2%;
-  font-weight: 100;
-}
-.forgotPassword {
-  margin-top: 1%;
-  margin-left: 4%;
-  font-weight: 100;
-  color: #0069ba;
-}
-.createbtn1 {
-  margin-top: 3%;
-  width: 42%;
-}
-.createbtn2 {
-  width: 55%;
-}
-.top {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 50%;
-  width: 50%;
   top: 0;
+  left: 55%;
+  height: 21px;
 }
-.bottom {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 50%;
-  width: 50%;
-  bottom: 0;
+.plus {
+  margin-top: 64%;
+  position: absolute;
+  top: 0;
+  left: 67%;
+  height: 45px;
 }

@@ -1,0 +1,65 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:black;">
+  <app-navbar></app-navbar>
+  <!-- <div class="container">
+    <img class="image1" src="assets/img/pattern.png" />
+    <img class="productimage" src="assets/img/basket.png" />
+    <p class="producttext">Shop Products</p>
+  </div> -->
+  <h1 *ngIf="productItems == 'accessories'">ACCESSORIES</h1>
+  <h1 *ngIf="productItems == 'apparel'">APPARELS</h1>
+  <div class="row rowstyle">
+    <div class="card col-md-3" *ngFor="let item of products">
+      <img src="/assets/img/box.png" class="boximage" />
+      <img
+        class="itemstyle"
+        src="{{ item.img }}"
+        alt="Avatar"
+        (click)="itemPage(item)"
+      />
+      <div class="container1">
+        <b class="msgstyle">{{ item.name }}</b>
+        <b class="pricestyle">{{ item.price }}</b>
+        <img
+          class="heart"
+          *ngIf="item.wishlist"
+          src="assets/img/heart.png"
+          (click)="addtoWishlist(item)"
+        />
+        <img
+          class="heart"
+          *ngIf="!item.wishlist"
+          src="assets/img/whiteheart.png"
+          (click)="addtoWishlist(item)"
+        />
+        <img class="plus" src="assets/img/plus.png" />
+      </div>
+    </div>
+  </div>
+  <!-- <div class="footer"> -->
+  <div class="row marginleft64">
+    <div class="col-md-6"></div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+          <label class="footerlabel">HELP</label>
+        </div>
+        <div class="col-md-6 marginleft">
+          <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+          <label class="footerlabel">CONTACT</label>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</body>

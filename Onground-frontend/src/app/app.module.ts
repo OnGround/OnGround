@@ -30,6 +30,7 @@ import { MusicShopComponent } from "./music-shop/music-shop.component";
 import { SportShopComponent } from "./sport-shop/sport-shop.component";
 import { RegisterComponent } from "./register/register.component";
 import { ItemComponent } from "./item/item.component";
+import { ProductsComponent } from "./products/products.component";
 
 const appRoutes: Routes = [
   { path: "home", component: SportsHomeComponent },
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "navbar", component: NavbarComponent },
   { path: "login", component: LoginComponent },
-  { path: "item", component: ItemComponent }
+  { path: "item", component: ItemComponent },
+  { path: ":name/products", component: ProductsComponent }
 ];
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ const appRoutes: Routes = [
     MusicShopComponent,
     SportShopComponent,
     RegisterComponent,
-    ItemComponent
+    ItemComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

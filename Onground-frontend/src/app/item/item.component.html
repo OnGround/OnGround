@@ -11,6 +11,26 @@
 <body style="background-color:black;">
   <div class="bgcolor">
     <app-navbar></app-navbar>
+    <div class="bottom">
+      <img
+        src="assets/img/facebook.png"
+        class="btnfacebook"
+        alt="Facebook"
+        (click)="socialMedia('facebook')"
+      />
+      <img
+        src="assets/img/twitter.png"
+        class="btntwitter"
+        alt="Twitter"
+        (click)="socialMedia('twitter')"
+      />
+      <img
+        src="assets/img/instagram.png"
+        class="btninsta"
+        alt="Instagram"
+        (click)="socialMedia('instagram')"
+      />
+    </div>
     <div class="container">
       <img class="image1" src="assets/img/pattern.png" />
       <img class="productimage" src="assets/img/basket.png" />
@@ -26,7 +46,7 @@
           class="itemstyle"
           src="assets/img/apparel.png"
           alt="Avatar"
-          (click)="apparels()"
+          (click)="onClickItem('accessories')"
         />
         <div class="container1">
           <b class="msgstyle">ACCESSORIES</b>
@@ -39,7 +59,7 @@
           class="itemstyle"
           src="assets/img/apparel.png"
           alt="Avatar"
-          (click)="apparels()"
+          (click)="onClickItem('apparel')"
         />
         <div class="container1">
           <b class="msgstyle">APPRARELS</b>
