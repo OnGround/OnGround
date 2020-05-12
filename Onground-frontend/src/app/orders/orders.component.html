@@ -1,0 +1,70 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:black;">
+  <div class="bgcolor">
+    <app-navbar></app-navbar>
+    <div class="container">
+      <img class="productimage" src="assets/img/account.png" />
+      <p class="producttext">ORDERS</p>
+    </div>
+    <div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a
+            [routerLink]="[orders]"
+            [routerLinkActive]="['active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="headernav margin-left120px"
+            >ORDERS</a
+          >
+        </li>
+        <li>
+          <a href="#" class="headernav">BUY AGAIN</a>
+        </li>
+        <li>
+          <a href="#" class="headernav">OPEN ORDERS</a>
+        </li>
+        <li>
+          <a href="#" class="headernav">CANCELLED ORDERS</a>
+        </li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="orderbox" *ngFor="let item of orderprods">
+        <img class="orderimg" src="{{ item.img }}" />
+        <b class="ordertitle">{{ item.name }}</b>
+        <b class="orderbrand">{{ item.brand }}</b>
+        <b class="orderprice">{{ item.price }}</b>
+        <a href="#" class="orderknowledge">VIEW ORDER MORE</a>
+        <a href="#" class="orderhelp">HELP</a>
+        <div class="circle"></div>
+        <div class="vl"></div>
+        <div class="circle2"></div>
+        <div class="v2"></div>
+        <div class="circle3"></div>
+        <b class="orderfrom">From</b>
+        <b class="orderfromplace" title="{{ item.from_status_place }}">{{
+          item.from_status_place
+        }}</b>
+        <b class="status">Status</b>
+        <b class="statusText" title="{{ item.status }}">{{ item.status }}</b>
+        <b class="orderto">To</b>
+        <b class="orderToPlace" title="{{ item.to_status_place }}">{{
+          item.to_status_place
+        }}</b>
+        <b class="statusPrice">Price</b>
+        <b class="statuspriceItem" title="{{ item.status_price }}">{{
+          item.status_price
+        }}</b>
+      </div>
+    </div>
+  </div>
+</body>

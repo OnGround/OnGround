@@ -1,0 +1,341 @@
+.bgcolor {
+  background-color: black;
+  padding: 0px;
+  // height: 100vh;
+}
+.container {
+  padding: 0px;
+  margin-left: inherit;
+  margin-top: 17vh;
+  // height: -webkit-fill-available;
+}
+.container .producttext {
+  position: absolute;
+  top: 20.5%;
+  left: 8%;
+  height: 3%;
+  color: white;
+  font-size: 21px;
+}
+.container .productimage {
+  position: absolute;
+  /* top: 9%; */
+  left: 3%;
+  height: 8vh;
+}
+
+.formcontainer {
+  padding-left: 3%;
+  padding-top: 2%;
+}
+.headingtext {
+  color: white;
+  font-size: 172%;
+  padding-left: 5%;
+  padding-top: 1%;
+}
+
+.profile {
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 31%;
+}
+
+.marginleft {
+  margin-left: -22%;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.searchbar {
+  margin-left: 364px;
+  padding: 16px 18px;
+  padding: 6px;
+  margin-top: 8px;
+  border-radius: 25px;
+  border: 1px solid black;
+  height: 31px;
+  width: 62%;
+  margin-right: 321px;
+}
+
+.logo {
+  height: 65px;
+  margin-left: 55px;
+}
+.company {
+  font-size: 24px;
+  margin-top: 8%;
+  margin-left: 15%;
+  z-index: 1;
+  color: white;
+  position: absolute;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.ml-15 {
+  margin-left: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.nav {
+  margin-left: 7%;
+  margin-top: 5%;
+  float: none !important;
+  margin-right: unset;
+  z-index: +1;
+  position: absolute;
+}
+.headernav {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  position: relative;
+  display: block;
+  padding: 16px 18px;
+  font-weight: 100;
+}
+a:hover {
+  color: red;
+  background-color: transparent !important;
+}
+a.active {
+  color: red;
+  background-color: transparent !important;
+}
+button:active {
+  color: #f05781;
+  background-color: transparent !important;
+}
+
+.glyphicon {
+  padding: 18px 8px;
+  font-size: 17px;
+  color: purple;
+  margin-left: 54px;
+}
+.wishlist {
+  width: 26px;
+  padding: 13px 0px;
+  margin-left: 30px;
+}
+.cart {
+  width: 23px;
+  padding: 14px 0px;
+  margin-left: 30px;
+}
+.account {
+  margin-left: 880%;
+  width: 28px;
+  padding: 14px 0px;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.orderbox {
+  margin-top: 1%;
+  width: 160vh;
+  height: 32vh;
+  border: 2px solid blue;
+  margin-left: 8%;
+  position: relative;
+}
+
+.orderbox .orderimg {
+  position: absolute;
+  top: 22.5%;
+  left: 3%;
+  height: 15vh;
+  width: 15vh;
+}
+.orderbox .ordertitle {
+  position: absolute;
+  top: 14.5%;
+  left: 22%;
+  width: 67vh;
+  color: white;
+  font-weight: 100;
+  font-size: 2.5vh;
+}
+.orderbox .orderbrand {
+  position: absolute;
+  top: 27.5%;
+  left: 22%;
+  width: 67vh;
+  color: white;
+  font-weight: 500;
+  font-size: 3.2vh;
+}
+.orderbox .orderprice {
+  position: absolute;
+  top: 47.5%;
+  left: 22%;
+  width: 67vh;
+  color: #f05781;
+  font-weight: 500;
+  font-size: 4.2vh;
+}
+.orderbox .orderknowledge {
+  position: absolute;
+  top: 79.5%;
+  left: 22%;
+  color: white;
+  font-size: 1.8vh;
+}
+
+.orderbox .orderhelp {
+  position: absolute;
+  top: 79.5%;
+  left: 38%;
+  color: white;
+  font-size: 1.8vh;
+}
+.orderbox .circle {
+  position: absolute;
+  width: 1.8vh;
+  height: 1.8vh;
+  border-radius: 50%;
+  background-color: blue;
+  left: 64%;
+  top: 20%;
+}
+.orderbox .vl {
+  position: absolute;
+  left: 64.6%;
+  border-left: 1px solid white;
+  top: 26%;
+  height: 6vh;
+}
+.orderbox .circle2 {
+  position: absolute;
+  width: 2vh;
+  height: 2vh;
+  border-radius: 50%;
+  background-color: blue;
+  left: 64%;
+  top: 45%;
+}
+.orderbox .v2 {
+  position: absolute;
+  left: 64.6%;
+  border-left: 1px solid white;
+  top: 52%;
+  height: 6vh;
+}
+.orderbox .circle3 {
+  position: absolute;
+  width: 1.8vh;
+  height: 1.8vh;
+  border-radius: 50%;
+  background-color: blue;
+  left: 64%;
+  top: 71%;
+}
+.orderbox .orderfrom {
+  position: absolute;
+  top: 17.5%;
+  left: 67%;
+  // width: 67vh;
+  color: blue;
+  font-weight: 500;
+  font-size: 3.2vh;
+}
+.orderbox .orderfromplace {
+  position: absolute;
+  top: 32%;
+  left: 67%;
+  width: 17vh;
+  color: white;
+  font-weight: 500;
+  font-size: 2.3vh;
+  white-space: nowrap;
+  width: 101;
+  overflow: hidden;
+}
+.orderbox .status {
+  position: absolute;
+  top: 17.5%;
+  left: 83%;
+  // width: 67vh;
+  color: blue;
+  font-weight: 500;
+  font-size: 3.2vh;
+}
+.orderbox .statusText {
+  position: absolute;
+  top: 32%;
+  left: 83%;
+  width: 17vh;
+  color: white;
+  font-weight: 500;
+  font-size: 2.3vh;
+  white-space: nowrap;
+  width: 101;
+  overflow: hidden;
+}
+.orderbox .orderto {
+  position: absolute;
+  top: 48.5%;
+  left: 67%;
+  width: 67vh;
+  color: blue;
+  font-weight: 500;
+  font-size: 3.2vh;
+}
+.orderbox .orderToPlace {
+  position: absolute;
+  top: 63%;
+  left: 67%;
+  width: 17vh;
+  color: white;
+  font-weight: 500;
+  font-size: 2.3vh;
+  white-space: nowrap;
+  width: 101;
+  overflow: hidden;
+}
+.orderbox .statusPrice {
+  position: absolute;
+  top: 48.5%;
+  left: 83%;
+  // width: 67vh;
+  color: blue;
+  font-weight: 500;
+  font-size: 3.2vh;
+}
+.orderbox .statuspriceItem {
+  position: absolute;
+  top: 63%;
+  left: 83%;
+  width: 17vh;
+  color: white;
+  font-weight: 500;
+  font-size: 2.3vh;
+  white-space: nowrap;
+  width: 101;
+  overflow: hidden;
+}
+.box {
+  margin-top: 10%;
+}

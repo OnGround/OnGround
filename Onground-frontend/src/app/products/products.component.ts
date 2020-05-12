@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { NavigationExtras, Router } from "@angular/router";
 
 @Component({
   selector: "app-products",
@@ -22,6 +22,8 @@ export class ProductsComponent implements OnInit {
           name: "FOOTBALL",
           img: "/../assets/img/ball1.png",
           price: "Rs 8000",
+          type: "accessories",
+          brand: "NIKE",
           wishlist: true
         },
         {
@@ -29,6 +31,8 @@ export class ProductsComponent implements OnInit {
           name: "FOOTBALL",
           img: "/../assets/img/ball1.png",
           price: "8000 Rs",
+          type: "accessories",
+          brand: "NIKE",
           wishlist: false
         },
         {
@@ -36,6 +40,8 @@ export class ProductsComponent implements OnInit {
           name: "FOOTBALL",
           img: "/../assets/img/ball3.png",
           price: "8000 Rs",
+          type: "accessories",
+          brand: "NIKE",
           wishlist: true
         },
         {
@@ -43,31 +49,75 @@ export class ProductsComponent implements OnInit {
           name: "FOOTBALL",
           img: "/../assets/img/ball4.png",
           price: "8000 Rs",
-          wishlist: true
+          type: "accessories",
+          wishlist: true,
+          brand: "NIKE"
         },
         {
           id: 5,
           name: "FOOTBALL",
           img: "/../assets/img/ball4.png",
           price: "8000 Rs",
+          brand: "NIKE",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 6,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball4.png",
           price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 7,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball3.png",
           price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 8,
+          brand: "NIKE",
+          name: "FOOTBALL",
+          img: "/../assets/img/ball1.png",
+          price: "8000 Rs",
+          type: "accessories",
+          wishlist: false
+        },
+        {
+          id: 9,
+          brand: "NIKE",
+          name: "FOOTBALL",
+          img: "/../assets/img/ball1.png",
+          price: "8000 Rs",
+          type: "accessories",
+          wishlist: false
+        },
+        {
+          id: 10,
+          brand: "NIKE",
+          name: "FOOTBALL",
+          img: "/../assets/img/ball4.png",
+          price: "8000 Rs",
+          type: "accessories",
+          wishlist: false
+        },
+        {
+          id: 11,
+          brand: "NIKE",
+          name: "FOOTBALL",
+          img: "/../assets/img/ball3.png",
+          price: "8000 Rs",
+          type: "accessories"
+        },
+        {
+          id: 12,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball1.png",
           price: "8000 Rs",
@@ -75,85 +125,74 @@ export class ProductsComponent implements OnInit {
         },
         {
           id: 9,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball1.png",
           price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 10,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball4.png",
           price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 11,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball3.png",
-          price: "8000 Rs"
+          price: "8000 Rs",
+          type: "accessories",
+          wishlist: false
         },
         {
           id: 12,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball1.png",
           price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 9,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball1.png",
           price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 10,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball4.png",
           price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 11,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball3.png",
           price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         },
         {
           id: 12,
+          brand: "NIKE",
           name: "FOOTBALL",
           img: "/../assets/img/ball1.png",
           price: "8000 Rs",
-          wishlist: false
-        },
-        {
-          id: 9,
-          name: "FOOTBALL",
-          img: "/../assets/img/ball1.png",
-          price: "8000 Rs",
-          wishlist: false
-        },
-        {
-          id: 10,
-          name: "FOOTBALL",
-          img: "/../assets/img/ball4.png",
-          price: "8000 Rs",
-          wishlist: false
-        },
-        {
-          id: 11,
-          name: "FOOTBALL",
-          img: "/../assets/img/ball3.png",
-          price: "8000 Rs",
-          wishlist: false
-        },
-        {
-          id: 12,
-          name: "FOOTBALL",
-          img: "/../assets/img/ball1.png",
-          price: "8000 Rs",
+          type: "accessories",
           wishlist: false
         }
       ];
@@ -163,63 +202,152 @@ export class ProductsComponent implements OnInit {
       this.products = [
         {
           id: 1,
+          brand: "NIKE",
           name: "SHOE",
           img: "/../assets/img/shoe1.png",
           price: "Rs 8000",
+          type: "apparel",
           wishlist: true
         },
         {
           id: 2,
+          brand: "NIKE",
           name: "SHOE",
           img: "/../assets/img/shoe2.png",
           price: "Rs 8000",
+          type: "apparel",
           wishlist: true
         },
         {
           id: 3,
+          brand: "NIKE",
           name: "SHOE",
           img: "/../assets/img/shoe1.png",
           price: "Rs 8000",
-          wishlist: true
+          wishlist: true,
+          type: "apparel"
         },
         {
           id: 4,
+          brand: "NIKE",
           name: "SHOE",
           img: "/../assets/img/shoe2.png",
           price: "Rs 8000",
+          type: "apparel",
           wishlist: true
         },
         {
           id: 5,
+          brand: "NIKE",
           name: "SHOE",
           img: "/../assets/img/shoe1.png",
           price: "Rs 8000",
+          type: "apparel",
           wishlist: true
         },
         {
           id: 6,
+          brand: "NIKE",
           name: "SHOE",
           img: "/../assets/img/shoe2.png",
           price: "Rs 8000",
+          type: "apparel",
           wishlist: true
         },
         {
           id: 7,
+          brand: "NIKE",
           name: "SHOE",
           img: "/../assets/img/shoe1.png",
           price: "Rs 8000",
+          type: "apparel",
           wishlist: true
         },
         {
           id: 8,
+          brand: "NIKE",
           name: "SHOE",
           img: "/../assets/img/shoe2.png",
           price: "Rs 8000",
+          type: "apparel",
           wishlist: true
         },
         {
           id: 9,
+          brand: "NIKE",
           name: "SHOE",
+          img: "/../assets/img/shoe1.png",
+          price: "Rs 8000",
+          type: "apparel",
+          wishlist: true
+        },
+        {
+          id: 10,
+          brand: "NIKE",
+          name: "SHOE",
+          img: "/../assets/img/shoe2.png",
+          price: "Rs 8000",
+          type: "apparel",
+          wishlist: true
+        },
+        {
+          id: 11,
+          name: "SHOE",
+          brand: "NIKE",
+          img: "/../assets/img/shoe1.png",
+          price: "Rs 8000",
+          type: "apparel",
+          wishlist: true
+        },
+        {
+          id: 12,
+          brand: "NIKE",
+          name: "SHOE",
+          img: "/../assets/img/shoe2.png",
+          price: "Rs 8000",
+          type: "apparel",
+          wishlist: true
+        },
+        {
+          id: 9,
+          brand: "NIKE",
+          name: "SHOE",
+          img: "/../assets/img/shoe1.png",
+          price: "Rs 8000",
+          type: "apparel",
+          wishlist: true
+        },
+        {
+          id: 10,
+          brand: "NIKE",
+          name: "SHOE",
+          img: "/../assets/img/shoe1.png",
+          price: "Rs 8000",
+          type: "apparel",
+          wishlist: true
+        },
+        {
+          id: 11,
+          name: "SHOE",
+          brand: "NIKE",
+          img: "/../assets/img/shoe1.png",
+          price: "Rs 8000",
+          wishlist: true,
+          type: "apparel"
+        },
+        {
+          id: 12,
+          name: "SHOE",
+          brand: "NIKE",
+          img: "/../assets/img/shoe2.png",
+          price: "Rs 8000",
+          wishlist: true,
+          type: "apparel"
+        },
+        {
+          id: 9,
+          name: "SHOE",
+          brand: "NIKE",
           img: "/../assets/img/shoe1.png",
           price: "Rs 8000",
           wishlist: true
@@ -227,6 +355,7 @@ export class ProductsComponent implements OnInit {
         {
           id: 10,
           name: "SHOE",
+          brand: "NIKE",
           img: "/../assets/img/shoe2.png",
           price: "Rs 8000",
           wishlist: true
@@ -234,6 +363,7 @@ export class ProductsComponent implements OnInit {
         {
           id: 11,
           name: "SHOE",
+          brand: "NIKE",
           img: "/../assets/img/shoe1.png",
           price: "Rs 8000",
           wishlist: true
@@ -241,62 +371,7 @@ export class ProductsComponent implements OnInit {
         {
           id: 12,
           name: "SHOE",
-          img: "/../assets/img/shoe2.png",
-          price: "Rs 8000",
-          wishlist: true
-        },
-        {
-          id: 9,
-          name: "SHOE",
-          img: "/../assets/img/shoe1.png",
-          price: "Rs 8000",
-          wishlist: true
-        },
-        {
-          id: 10,
-          name: "SHOE",
-          img: "/../assets/img/shoe1.png",
-          price: "Rs 8000",
-          wishlist: true
-        },
-        {
-          id: 11,
-          name: "SHOE",
-          img: "/../assets/img/shoe1.png",
-          price: "Rs 8000",
-          wishlist: true
-        },
-        {
-          id: 12,
-          name: "SHOE",
-          img: "/../assets/img/shoe2.png",
-          price: "Rs 8000",
-          wishlist: true
-        },
-        {
-          id: 9,
-          name: "SHOE",
-          img: "/../assets/img/shoe1.png",
-          price: "Rs 8000",
-          wishlist: true
-        },
-        {
-          id: 10,
-          name: "SHOE",
-          img: "/../assets/img/shoe2.png",
-          price: "Rs 8000",
-          wishlist: true
-        },
-        {
-          id: 11,
-          name: "SHOE",
-          img: "/../assets/img/shoe1.png",
-          price: "Rs 8000",
-          wishlist: true
-        },
-        {
-          id: 12,
-          name: "SHOE",
+          brand: "NIKE",
           img: "/../assets/img/shoe2.png",
           price: "Rs 8000",
           wishlist: true
@@ -306,5 +381,22 @@ export class ProductsComponent implements OnInit {
   }
   addtoWishlist(item) {
     item.wishlist = !item.wishlist;
+  }
+  itemPage(item) {
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        item_id: item.id,
+        item_name: item.name,
+        item_img: item.img,
+        item_price: item.price,
+        item_type: item.type,
+        item_wishlist: item.wishlist,
+        item_brand: item.brand
+      }
+    };
+    this.router.navigate(
+      ["/" + item.type + "/products/productspecific"],
+      navigationExtras
+    );
   }
 }

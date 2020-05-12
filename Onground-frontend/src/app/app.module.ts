@@ -23,7 +23,8 @@ import {
   MatChipsModule,
   MatFormFieldModule,
   MatCheckboxModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSelectModule
 } from "@angular/material";
 import { MusicHomeComponent } from "./music-home/music-home.component";
 import { MusicShopComponent } from "./music-shop/music-shop.component";
@@ -31,6 +32,11 @@ import { SportShopComponent } from "./sport-shop/sport-shop.component";
 import { RegisterComponent } from "./register/register.component";
 import { ItemComponent } from "./item/item.component";
 import { ProductsComponent } from "./products/products.component";
+import { ProductspecificComponent } from "./productspecific/productspecific.component";
+import { CartComponent } from "./cart/cart.component";
+import { AccountComponent } from "./account/account.component";
+import { OrdersComponent } from "./orders/orders.component";
+import { PaymentComponent } from "./payment/payment.component";
 
 const appRoutes: Routes = [
   { path: "home", component: SportsHomeComponent },
@@ -44,7 +50,18 @@ const appRoutes: Routes = [
   { path: "navbar", component: NavbarComponent },
   { path: "login", component: LoginComponent },
   { path: "item", component: ItemComponent },
-  { path: ":name/products", component: ProductsComponent }
+  { path: "accounts", component: AccountComponent },
+  { path: ":name/products", component: ProductsComponent },
+  { path: "orders", component: OrdersComponent },
+  { path: "payment", component: PaymentComponent },
+  {
+    path: ":name/products/productspecific",
+    component: ProductspecificComponent
+  },
+  {
+    path: ":name/products/productspecific/cart",
+    component: CartComponent
+  }
 ];
 @NgModule({
   declarations: [
@@ -61,7 +78,12 @@ const appRoutes: Routes = [
     SportShopComponent,
     RegisterComponent,
     ItemComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductspecificComponent,
+    CartComponent,
+    AccountComponent,
+    OrdersComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -78,7 +100,8 @@ const appRoutes: Routes = [
     MatChipsModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

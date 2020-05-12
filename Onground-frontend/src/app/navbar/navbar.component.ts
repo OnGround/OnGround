@@ -18,4 +18,7 @@ export class NavbarComponent implements OnInit {
   searchbar() {
     this.showSearch = !this.showSearch;
   }
+  account() {
+    this.router.navigateByUrl("/accounts");
+  }
 }

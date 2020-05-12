@@ -1,0 +1,276 @@
+.bgcolor {
+  background-color: black;
+  padding: 0px;
+  height: 100vh;
+}
+.container {
+  padding: 0px;
+  margin-left: inherit;
+  margin-top: 17vh;
+  // height: -webkit-fill-available;
+}
+.container .producttext {
+  position: absolute;
+  top: 20.5%;
+  left: 8%;
+  height: 3%;
+  color: white;
+  font-size: 21px;
+}
+.container .productimage {
+  position: absolute;
+  /* top: 9%; */
+  left: 3%;
+  height: 8vh;
+}
+
+.formcontainer {
+  padding-left: 3%;
+  padding-top: 2%;
+}
+.headingtext {
+  color: white;
+  font-size: 172%;
+  padding-left: 5%;
+  padding-top: 1%;
+}
+
+.profile {
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 31%;
+}
+
+.marginleft {
+  margin-left: -22%;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.searchbar {
+  margin-left: 364px;
+  padding: 16px 18px;
+  padding: 6px;
+  margin-top: 8px;
+  border-radius: 25px;
+  border: 1px solid black;
+  height: 31px;
+  width: 62%;
+  margin-right: 321px;
+}
+
+.logo {
+  height: 65px;
+  margin-left: 55px;
+}
+.company {
+  font-size: 24px;
+  margin-top: 8%;
+  margin-left: 15%;
+  z-index: 1;
+  color: white;
+  position: absolute;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input:checked + .slider {
+  background-color: white;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px white;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.ml-15 {
+  margin-left: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+.nav {
+  margin-left: 7%;
+  margin-top: 5%;
+  float: none !important;
+  margin-right: unset;
+  z-index: +1;
+  position: absolute;
+}
+.headernav {
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  position: relative;
+  display: block;
+  padding: 16px 18px;
+  font-weight: 100;
+}
+a:hover {
+  color: red;
+  background-color: transparent !important;
+}
+a.active {
+  color: red;
+  background-color: transparent !important;
+}
+button:active {
+  color: #f05781;
+  background-color: transparent !important;
+}
+.paymentoptions {
+  margin-top: 5%;
+  color: blue;
+  margin-left: 3.5%;
+  margin-bottom: 1%;
+}
+.boximagecard {
+  position: relative;
+  height: 8vh;
+  /* width: 10%; */
+  background-color: blue;
+  margin-left: 3.5%;
+}
+.boximagecard .checkboxclass {
+  position: absolute;
+  border-radius: 50%;
+  left: 2%;
+  top: 24%;
+}
+.boximagecard .phonepay {
+  position: absolute;
+}
+.mglft {
+  margin-left: 0.6%;
+}
+.top4 {
+  top: 4% !important;
+}
+.cardType {
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  left: 8%;
+  top: 17%;
+}
+.expiryDatebox {
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  left: 48%;
+  top: 60%;
+  width: 9vh;
+}
+.expiryDate {
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  left: 35%;
+  top: 61%;
+}
+.cvv {
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  left: 62%;
+  top: 61%;
+}
+.cvvbox {
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  left: 68%;
+  top: 60%;
+  width: 6vh;
+}
+.cardNo {
+  color: white;
+  font-weight: 500;
+  position: absolute;
+  left: 8%;
+  top: 49%;
+}
+.cardNoTextBox {
+  position: absolute;
+  top: 60%;
+  left: 8%;
+  width: 22vh;
+}
+.icon-container {
+  height: 5vh;
+  width: 158%;
+  position: absolute;
+  padding: 0px 7px;
+  font-size: 4.3vh;
+  top: 29%;
+  left: 7%;
+}
+.boxPayment {
+  display: block;
+  position: absolute;
+  font-weight: 400;
+  padding-left: 7%;
+  cursor: pointer;
+  font-size: 19px;
+  top: 18%;
+  left: 1%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+}
+
+/* Hide the browser's default radio button */
+.boxPayment input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  color: white;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 29%;
+  left: 8%;
+  height: 2vh;
+  width: 2vh;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.boxPayment:hover input ~ .checkmark {
+  background-color: white;
+}
+
+/* When the radio button is checked, add a blue background */
+.boxPayment input:checked ~ .checkmark {
+  background-color: black;
+}
+
+/* Style the indicator (dot/circle) */
+.boxPayment .checkmark:after {
+  background: black;
+  position: absolute;
+  top: 28%;
+  left: 23%;
+  height: 1vh;
+  width: 1vh;
+  border-radius: 50%;
+}
+.row {
+  margin-bottom: 1%;
+}
+.height32vh {
+  height: 32vh;
+}

@@ -1,0 +1,123 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:black;">
+  <div class="bgcolor">
+    <div class="bottom">
+      <img
+        src="assets/img/facebook.png"
+        class="btnfacebook"
+        alt="Facebook"
+        (click)="socialMedia('facebook')"
+      />
+      <img
+        src="assets/img/twitter.png"
+        class="btntwitter"
+        alt="Twitter"
+        (click)="socialMedia('twitter')"
+      />
+      <img
+        src="assets/img/instagram.png"
+        class="btninsta"
+        alt="Instagram"
+        (click)="socialMedia('instagram')"
+      />
+    </div>
+    <app-navbar></app-navbar>
+    <div class="container">
+      <img class="productimage" src="assets/img/account.png" />
+      <p class="producttext">ACCOUNT</p>
+    </div>
+    <div class="row margintop">
+      <div class="card col-md-2 boximagecard" (click)="stats()">
+        <p class="pimage">
+          <img src="/assets/img/account.png" />
+        </p>
+        <div>
+          <h4 class="msgstyle">STATS</h4>
+        </div>
+      </div>
+      <div class="card col-md-2 boximagecard" (click)="orders()">
+        <p class="pimage">
+          <img src="/assets/img/account.png" />
+        </p>
+        <div>
+          <h4 class="msgstyle">ORDERS</h4>
+        </div>
+      </div>
+      <div class="card col-md-2 boximagecard" (click)="booking()">
+        <p class="pimage">
+          <img src="/assets/img/account.png" />
+        </p>
+        <div>
+          <h4 class="msgstyle">BOOKINGS</h4>
+        </div>
+      </div>
+      <div class="card col-md-2 boximagecard" (click)="sessions()">
+        <p class="pimage">
+          <img src="/assets/img/account.png" />
+        </p>
+        <div>
+          <h4 class="msgstyle">SESSIONS</h4>
+        </div>
+      </div>
+      <div class="card col-md-2 boximagecard" (click)="events()">
+        <p class="pimage">
+          <img src="/assets/img/account.png" />
+        </p>
+        <div>
+          <h4 class="msgstyle">EVENTS</h4>
+        </div>
+      </div>
+      <div class="card col-md-2 boximagecard" (click)="details()">
+        <p class="pimage">
+          <img src="/assets/img/account.png" />
+        </p>
+        <div>
+          <h4 class="msgstyle">ACCOUNT DETAILS</h4>
+        </div>
+      </div>
+      <p class="pimage">
+        <button
+          type="button"
+          class="btn btn-danger logoutbtn"
+          (click)="logout()"
+        >
+          LOG OUT
+        </button>
+      </p>
+    </div>
+    <div class="footer">
+      <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6">
+              <img
+                class="help"
+                src="assets/img/contact.png"
+                (click)="onSave()"
+              />
+              <label class="footerlabel">HELP</label>
+            </div>
+            <div class="col-md-6 marginleft">
+              <img
+                class="help"
+                src="assets/img/contact.png"
+                (click)="onSave()"
+              />
+              <label class="footerlabel">CONTACT</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

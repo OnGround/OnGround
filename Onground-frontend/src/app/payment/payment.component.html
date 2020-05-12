@@ -1,0 +1,105 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<body style="background-color:black;">
+  <div class="bgcolor">
+    <app-navbar></app-navbar>
+    <div class="container">
+      <img class="productimage" src="assets/img/account.png" />
+      <p class="producttext">PAYMENTS</p>
+    </div>
+    <div class="paymentoptions">PAYMENT OPTIONS</div>
+    <div class="row">
+      <div class="col-md-6 mglft">
+        <div class="boximagecard">
+          <label class="boxPayment"
+            >PhonePe
+            <input type="radio" checked="checked" name="radio" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mglft">
+        <div class="boximagecard">
+          <label class="boxPayment"
+            >Google Pay/ UPI
+            <input type="radio" name="radio" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mglft">
+        <div class="boximagecard height32vh">
+          <label class="boxPayment top4"
+            >Credit/ Debit Card
+            <input type="radio" name="radio" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="cardType">Select Card Type:</label>
+          <div class="icon-container">
+            <i
+              class="fa fa-cc-visa"
+              style="color:white; padding-right: 0.5%"
+            ></i>
+            <i class="fa fa-cc-amex" style="color:red; padding-right: 0.5%"></i>
+            <i
+              class="fa fa-cc-mastercard"
+              style="color:red; padding-right: 0.5%"
+            ></i>
+            <i
+              class="fa fa-cc-discover"
+              style="color:orange; padding-right: 0.5%"
+            ></i>
+          </div>
+          <label for="ccnum" class="cardNo">Card Number:</label>
+          <input
+            type="text"
+            id="ccnum"
+            name="cardnumber"
+            class="cardNoTextBox"
+            placeholder="1111-2222-3333-4444"
+            maxlength="16"
+            minlength="16"
+          />
+          <label for="ccnum" class="expiryDate">Expiry Date:</label>
+
+          <input
+            id="column-left"
+            class="expiryDatebox"
+            type="text"
+            name="expiry"
+            placeholder="MM / YY"
+          />
+          <label for="ccnum" class="cvv">CVV:</label>
+
+          <input
+            id="column-right"
+            class="cvvbox"
+            type="password"
+            maxlength="3"
+            minlength="3"
+            name="cvc"
+            placeholder="CCV"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

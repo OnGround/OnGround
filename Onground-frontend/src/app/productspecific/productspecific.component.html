@@ -1,0 +1,184 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:black;">
+  <div class="bgcolor">
+    <app-navbar></app-navbar>
+
+    <div class="container">
+      <img class="image1" src="assets/img/pattern.png" />
+      <p class="producttext">{{ leftheader | titlecase }}</p>
+      <!-- <div class="row" style="margin-top: 278px;">
+        <div class="col-md-6">
+       
+        </div>
+      </div> -->
+    </div>
+    <div class="row mt19">
+      <div class="col-md-6">
+        <div class="slideshow-container">
+          <div *ngIf="item.wishlist">
+            <img
+              class="heart"
+              src="assets/img/heart.png"
+              (click)="addtoWishlist(item)"
+            />
+          </div>
+          <div *ngIf="!item.wishlist">
+            <img
+              class="heart"
+              src="assets/img/whiteheart.png"
+              (click)="addtoWishlist(item)"
+            />
+          </div>
+
+          <div class="mySlides" *ngFor="let item of imagelist; index as i">
+            <div class="numbertext">{{ i + 1 }}</div>
+            <img src="{{ item.img }}" class="itemimagestyle" />
+          </div>
+
+          <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+          <a class="next" (click)="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <!-- <div
+          style="text-align:center"
+          *ngFor="let item of imagelist; index as i"
+        >
+          <span class="dot" (click)="currentSlide(1)"></span>
+          <span class="dot" (click)="currentSlide(2)"></span>
+          <span class="dot" (click)="currentSlide(3)"></span>
+        </div> -->
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5 mt12">
+        <div class="itemname">{{ item.name }}</div>
+        <div class="itembrand">{{ item.brand }}</div>
+        <div class="itemprice">{{ item.price }}</div>
+        <div class="row itembutton">
+          <div class="col-md-6 padding0">
+            <div class="availablecolours" *ngIf="item.colors">
+              AVAILABLE COLOURS
+            </div>
+            <select
+              *ngIf="item.colors"
+              class="form-control dropdown"
+              (change)="onChange($event.target.value)"
+              [ngStyle]="{ 'background-color': selectedColor }"
+            >
+              <option
+                *ngFor="let color of item.colors"
+                [value]="color.value"
+                [ngStyle]="{ 'background-color': color.value }"
+              ></option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <div class="availablecolours" *ngIf="item.colors">
+              SIZE
+            </div>
+            <select class="form-control dropdown">
+              <option *ngFor="let z of item.size" [value]="z">{{ z }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="row itembutton">
+          <div class="col-md-6 padding0">
+            <img
+              class="cartButton"
+              src="assets/img/addtoCartbtn.png"
+              (click)="addtoCart(item)"
+            />
+          </div>
+          <!-- <div class="col-md-2"></div> -->
+          <div class="col-md-6">
+            <select class="form-control dropdown2">
+              <option *ngFor="let z of numberOfItems" [value]="z">{{
+                z
+              }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="itemdescriptiontitle">PRODUCT DESCRIPTION</div>
+        <div class="itemdescription">{{ item.description }}</div>
+        <div class="row">
+          <div class="col-md-4 padding0">
+            <div class="reviewstitle">
+              READ REVIEWS
+            </div>
+          </div>
+          <div class="col-md-6 padding0">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="col-md-6 padding0">
+            <div class="reviewstitle">{{ item.rating }}/5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="related">RELATED PRODUCTS:</div>
+      <div class="row rowstyle padding0">
+        <div class="card col-md-2" *ngFor="let item of relatedproducts">
+          <img src="/assets/img/box.png" class="boximage" />
+          <img
+            class="itemstyle"
+            src="{{ item.img }}"
+            alt="Avatar"
+            (click)="itemPage(item)"
+          />
+          <div class="container1">
+            <b class="msgstyle">{{ item.name }}</b>
+            <b class="pricestyle">{{ item.price }}</b>
+            <img
+              class="heart2"
+              *ngIf="item.wishlist"
+              src="assets/img/heart.png"
+              (click)="addtoWishlist2(item)"
+            />
+            <img
+              class="heart2"
+              *ngIf="!item.wishlist"
+              src="assets/img/whiteheart.png"
+              (click)="addtoWishlist2(item)"
+            />
+            <img
+              class="plus"
+              src="assets/img/plus.png"
+              (click)="addtoCart(item)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-6">
+            <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+            <label class="footerlabel">HELP</label>
+          </div>
+          <div class="col-md-6 marginleft">
+            <img class="help" src="assets/img/contact.png" (click)="onSave()" />
+            <label class="footerlabel">CONTACT</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

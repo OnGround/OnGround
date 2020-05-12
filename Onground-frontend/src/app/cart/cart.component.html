@@ -1,0 +1,73 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:black;">
+  <div class="bgcolor">
+    <app-navbar></app-navbar>
+    <div class="container">
+      <img class="image1" src="assets/img/pattern.png" />
+      <img class="productimage" src="assets/img/basket.png" />
+      <p class="producttext">Shop Products</p>
+    </div>
+    <div class="row mgtop25">
+      <div class="col-md-2"></div>
+      <div class="width">
+        <div class="containercart">
+          <img class="checkedimg" src="assets/img/checked.png" />
+          <img class="prodimg" src="{{ img }}" />
+          <p class="addcarttext">Added to Cart</p>
+          <img class="horizontalbar" src="assets/img/horizontalbar.png" />
+          <p class="subtotaltitle">Cart Subtotal (1 item) {{ price }}</p>
+          <button type="button" class="btn btn-light btncart">Cart</button>
+          <button type="button" class="btn btn-warning btnbuy">
+            PROCEED TO BUY
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
+    <div>
+      <div class="related">RELATED PRODUCTS:</div>
+      <div class="row rowstyle padding0">
+        <div class="card col-md-2" *ngFor="let item of relatedproducts">
+          <img src="/assets/img/box.png" class="boximage" />
+          <img
+            class="itemstyle"
+            src="{{ item.img }}"
+            alt="Avatar"
+            (click)="itemPage(item)"
+          />
+          <div class="container1">
+            <b class="msgstyle">{{ item.name }}</b>
+            <b class="pricestyle">{{ item.price }}</b>
+            <img
+              class="heart2"
+              *ngIf="item.wishlist"
+              src="assets/img/heart.png"
+              (click)="addtoWishlist2(item)"
+            />
+            <img
+              class="heart2"
+              *ngIf="!item.wishlist"
+              src="assets/img/whiteheart.png"
+              (click)="addtoWishlist2(item)"
+            />
+            <img
+              class="plus"
+              src="assets/img/plus.png"
+              (click)="addtoCart(item)"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
